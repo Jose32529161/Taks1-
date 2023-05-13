@@ -1,7 +1,7 @@
 const sqlite3 = require('sqlite3').verbose();
 
 // open database in memory
-let db = new sqlite3.Database('./db/chinook.db', sqlite3.OPEN_READWRITE, (err) => {
+let db = new sqlite3.Database('./db/chinook.db', sqlite3.OPEN_CREATE, (err) => {
   if (err) {
     console.error(err.message);
   }
